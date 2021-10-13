@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using dotnethrmsmy.Application.Common.Interfaces;
 
 namespace dotnethrmsmy.Application.CityItems.Queries
 {
@@ -24,10 +25,10 @@ namespace dotnethrmsmy.Application.CityItems.Queries
 
     public class GetCityQueryHandler : IRequestHandler<GetCityQuery, CityVm>
     {
-        private readonly PostreSqlContext _context;
+        private readonly IApplicationDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetCityQueryHandler(PostreSqlContext context, IMapper mapper)
+        public GetCityQueryHandler(IApplicationDbContext context, IMapper mapper)
         {
             _mapper = mapper;
             _context = context;

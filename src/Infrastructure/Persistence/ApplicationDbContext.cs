@@ -35,29 +35,29 @@ namespace dotnethrmsmy.Infrastructure.Persistence
 
         public DbSet<TodoList> TodoLists { get; set; }
         
-        public virtual DbSet<City> Cities { get; set; }
-        public virtual DbSet<CompanyStaff> CompanyStaffs { get; set; }
-        public virtual DbSet<CompanyStaffVerification> CompanyStaffVerifications { get; set; }
-        public virtual DbSet<EmailActivation> EmailActivations { get; set; }
-        public virtual DbSet<Employer> Employers { get; set; }
-        public virtual DbSet<EmployerUpdate> EmployerUpdates { get; set; }
-        public virtual DbSet<JobAdvert> JobAdverts { get; set; }
-        public virtual DbSet<JobPosition> JobPositions { get; set; }
-        public virtual DbSet<JobSeeker> JobSeekers { get; set; }
-        public virtual DbSet<JobSeekerCv> JobSeekerCvs { get; set; }
-        public virtual DbSet<JobSeekerCvEducation> JobSeekerCvEducations { get; set; }
-        public virtual DbSet<JobSeekerCvExperience> JobSeekerCvExperiences { get; set; }
-        public virtual DbSet<JobSeekerCvImage> JobSeekerCvImages { get; set; }
-        public virtual DbSet<JobSeekerCvLanguage> JobSeekerCvLanguages { get; set; }
-        public virtual DbSet<JobSeekerCvSkill> JobSeekerCvSkills { get; set; }
-        public virtual DbSet<JobSeekerCvWebSite> JobSeekerCvWebSites { get; set; }
-        public virtual DbSet<JobSeekersFavoriteJobAdvert> JobSeekersFavoriteJobAdverts { get; set; }
-        public virtual DbSet<Language> Languages { get; set; }
-        public virtual DbSet<MernisActivation> MernisActivations { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<WebSite> WebSites { get; set; }
-        public virtual DbSet<WorkingTime> WorkingTimes { get; set; }
-        public virtual DbSet<WorkingType> WorkingTypes { get; set; }
+        public  DbSet<City> Cities { get; set; }
+        public  DbSet<CompanyStaff> CompanyStaffs { get; set; }
+        public  DbSet<CompanyStaffVerification> CompanyStaffVerifications { get; set; }
+        public  DbSet<EmailActivation> EmailActivations { get; set; }
+        public  DbSet<Employer> Employers { get; set; }
+        public  DbSet<EmployerUpdate> EmployerUpdates { get; set; }
+        public  DbSet<JobAdvert> JobAdverts { get; set; }
+        public  DbSet<JobPosition> JobPositions { get; set; }
+        public  DbSet<JobSeeker> JobSeekers { get; set; }
+        public  DbSet<JobSeekerCv> JobSeekerCvs { get; set; }
+        public  DbSet<JobSeekerCvEducation> JobSeekerCvEducations { get; set; }
+        public  DbSet<JobSeekerCvExperience> JobSeekerCvExperiences { get; set; }
+        public  DbSet<JobSeekerCvImage> JobSeekerCvImages { get; set; }
+        public  DbSet<JobSeekerCvLanguage> JobSeekerCvLanguages { get; set; }
+        public  DbSet<JobSeekerCvSkill> JobSeekerCvSkills { get; set; }
+        public  DbSet<JobSeekerCvWebSite> JobSeekerCvWebSites { get; set; }
+        public  DbSet<JobSeekersFavoriteJobAdvert> JobSeekersFavoriteJobAdverts { get; set; }
+        public  DbSet<Language> Languages { get; set; }
+        public  DbSet<MernisActivation> MernisActivations { get; set; }
+        public new  DbSet<User>  Users { get; set; }
+        public  DbSet<WebSite> WebSites { get; set; }
+        public  DbSet<WorkingTime> WorkingTimes { get; set; }
+        public  DbSet<WorkingType> WorkingTypes { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
