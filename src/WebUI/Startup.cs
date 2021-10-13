@@ -35,9 +35,9 @@ namespace dotnethrmsmy.WebUI
 
 
             #region myadditonalconfig
-            services.AddDbContext<PostreSqlContext>(options => options.UseNpgsql(Configuration
+            services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(Configuration
                 .GetConnectionString("DefaultConnection"),b=>b.MigrationsAssembly("Infrastructure")));
-            services.AddScoped<DbContext>(provider => provider.GetService<PostreSqlContext>());
+            services.AddScoped<DbContext>(provider => provider.GetService<ApplicationDbContext>());
             #endregion 
             services.AddApplication();
             services.AddInfrastructure(Configuration);
@@ -48,8 +48,8 @@ namespace dotnethrmsmy.WebUI
 
             services.AddHttpContextAccessor();
 
-            services.AddHealthChecks()
-                .AddDbContextCheck<ApplicationDbContext>();
+            //services.AddHealthChecks()
+            //    .AddDbContextCheck<ApplicationDbContext>();
             services.AddHealthChecks().AddDbContextCheck<PostreSqlContext>();
 
             services.AddControllersWithViews(options =>

@@ -17,7 +17,7 @@ namespace dotnethrmsmy.Domain.Entities
         public string Title { get; set; }
         public DateTime CreatedAt { get; set; }
         public bool IsActive { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } 
 
         public virtual ICollection<JobAdvert> JobAdverts { get; set; }
         public virtual ICollection<JobSeekerCvExperience> JobSeekerCvExperiences { get; set; }

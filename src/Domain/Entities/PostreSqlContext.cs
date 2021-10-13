@@ -62,7 +62,6 @@ namespace dotnethrmsmy.Domain.Entities
                 entity.ToTable("cities");
 
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.Name)
