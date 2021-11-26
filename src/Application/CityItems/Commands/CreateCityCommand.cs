@@ -16,7 +16,8 @@ namespace dotnethrmsmy.Application.CityItems.Commands
     public class CreateCityCommand : IRequest<int>
     {
         public string Name { get; set; }
-
+  
+  
     }
 
 
